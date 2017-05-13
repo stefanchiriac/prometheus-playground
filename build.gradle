@@ -1,0 +1,45 @@
+ext {
+    prometheusVersion = '0.0.21'
+}
+
+buildscript {
+	ext {
+		springBootVersion = '1.5.3.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-jetty')
+	compile('org.apache.commons:commons-lang3:3.5')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+	// prometheus dependencies
+	compile("io.prometheus:simpleclient:${prometheusVersion}")
+	compile("io.prometheus:simpleclient_hotspot:${prometheusVersion}")
+	compile("io.prometheus:simpleclient_servlet:${prometheusVersion}")
+	compile("io.prometheus:simpleclient_pushgateway:${prometheusVersion}")
+	compile("io.prometheus:simpleclient_spring_boot:${prometheusVersion}")
+
+}
