@@ -1,15 +1,17 @@
-package com.magnxpyr.prometheus.client;
+package com.magnxpyr.prometheus.config;
 
 import io.prometheus.client.Collector;
 import io.prometheus.client.GaugeMetricFamily;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by gatz on 13.05.2017.
+ * Created by Stefan Chiriac on 13.05.2017.
  */
+@Component
 public class CustomCollector extends Collector {
 
     public List<MetricFamilySamples> collect() {

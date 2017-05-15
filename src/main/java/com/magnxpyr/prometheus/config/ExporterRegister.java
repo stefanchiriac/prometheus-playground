@@ -1,6 +1,5 @@
 package com.magnxpyr.prometheus.config;
 
-import com.magnxpyr.prometheus.client.CustomCollector;
 import io.prometheus.client.Collector;
 import io.prometheus.client.hotspot.MemoryPoolsExports;
 import io.prometheus.client.hotspot.StandardExports;
@@ -32,7 +31,6 @@ public class ExporterRegister {
         List<Collector> collectors = new ArrayList<>();
         collectors.add(new StandardExports());
         collectors.add(new MemoryPoolsExports());
-        collectors.add(new CustomCollector());
         return new ExporterRegister(collectors);
     }
 }
