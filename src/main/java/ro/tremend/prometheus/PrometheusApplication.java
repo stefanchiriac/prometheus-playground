@@ -1,4 +1,4 @@
-package com.magnxpyr.prometheus;
+package ro.tremend.prometheus;
 
 import io.prometheus.client.spring.boot.EnablePrometheusEndpoint;
 import io.prometheus.client.spring.boot.EnableSpringBootMetricsCollector;

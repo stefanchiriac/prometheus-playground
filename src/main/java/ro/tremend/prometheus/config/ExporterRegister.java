@@ -1,4 +1,4 @@
-package com.magnxpyr.prometheus.config;
+package ro.tremend.prometheus.config;
 
 import io.prometheus.client.Collector;
 import io.prometheus.client.hotspot.MemoryPoolsExports;

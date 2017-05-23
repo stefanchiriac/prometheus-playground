@@ -1,14 +1,13 @@
-package com.magnxpyr.prometheus.controller;
+package ro.tremend.prometheus.controller;
 
-import com.magnxpyr.prometheus.config.CustomCollector;
-import com.magnxpyr.prometheus.config.MetricHolder;
+import ro.tremend.prometheus.config.CustomCollector;
+import ro.tremend.prometheus.config.MetricHolder;
 import io.prometheus.client.CollectorRegistry;
 import io.prometheus.client.Gauge;
 import io.prometheus.client.exporter.PushGateway;
 import org.apache.commons.lang3.RandomUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

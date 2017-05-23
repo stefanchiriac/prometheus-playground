@@ -1,4 +1,4 @@
-package com.magnxpyr.prometheus;
+package ro.tremend.prometheus;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
